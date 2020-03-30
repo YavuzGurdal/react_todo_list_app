@@ -134,9 +134,8 @@ export class Home extends Component {
                     backgroundColor:
                         todo.complete ? '#3fc5f0' :
                             Date.now() - Date.parse(todo.date) > 172800000 ? '#6decb9' :
-                                Date.now() - Date.parse(todo.date) > 0 ? '#eef5b2' :
-                                    Date.now() - Date.parse(todo.date) < 0 ? '#ff7272' : ''
-                    //#42dee1  //#85C1E9 
+                            Date.now() - Date.parse(todo.date) > 0 ? '#eef5b2' :
+                            Date.now() - Date.parse(todo.date) < 0 ? '#ff7272' : ''
                 }} >
 
                     <Accordion.Toggle
