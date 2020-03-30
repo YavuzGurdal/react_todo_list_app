@@ -134,9 +134,8 @@ export class Home extends Component {
                     backgroundColor:
                         todo.complete ? '#3fc5f0' :
                             Date.now() - Date.parse(todo.date) > 172800000 ? '#6decb9' :
-                                Date.now() - Date.parse(todo.date) > 0 ? '#eef5b2' :
-                                    Date.now() - Date.parse(todo.date) < 0 ? '#ff7272' : ''
-                    //#42dee1  //#85C1E9 
+                            Date.now() - Date.parse(todo.date) > 0 ? '#eef5b2' :
+                            Date.now() - Date.parse(todo.date) < 0 ? '#ff7272' : '' 
                 }} >
 
                     <Accordion.Toggle
@@ -275,17 +274,17 @@ export class Home extends Component {
                         {/* bunlar filtreleme icin gerekli olan tuslar */}
                         <div style={{ width: '33.33%' }}>
                             <div className='mr-2'>
-                                <Button className='buttonFilter' variant="danger" onClick={() => this.updateShowFilteredTodos('active')}>ACTIVE</Button>
+                                <Button className='buttonFilter bg-danger' variant="danger" onClick={() => this.updateShowFilteredTodos('active')}>ACTIVE</Button>
                             </div>
                         </div>
                         <div style={{ width: '33.33%' }}>
                             <div className='mx-2'>
-                                <Button className='buttonFilter' onClick={() => this.updateShowFilteredTodos('all')}>ALL</Button>
+                                <Button className='buttonFilter bg-primary' variant="primary" onClick={() => this.updateShowFilteredTodos('all')}>ALL</Button>
                             </div>
                         </div>
                         <div style={{ width: '33.33%' }}>
                             <div className='ml-2'>
-                                <Button className='buttonFilter' variant="success" onClick={() => this.updateShowFilteredTodos('complete')}>COMPLETE</Button>
+                                <Button className='buttonFilter bg-success' variant="success" onClick={() => this.updateShowFilteredTodos('complete')}>COMPLETE</Button>
                             </div>
                         </div>
                     </div>
