@@ -1,0 +1,173 @@
+.card {
+  position: static !important;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker-wrapper input {
+  width: 100%;
+  background-color: #eaecee;
+  cursor: pointer;
+}
+
+/* input icindeki, card header'daki butonları düzgün yerleştirmek için */
+.accordionToggle {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 22px !important;
+  text-align: left !important;
+}
+
+/* input icindeki, card header'daki butonları düzgün yerleştirmek için */
+/* position: relative; ve position: absolute; anlaşıldı */
+.cardHeader {
+  position: relative;
+}
+
+.cardHeader .btn-success {
+  position: absolute;
+  right: 60px;
+  top: 10.5px;
+  padding-bottom: 9px;
+  padding-top: 4px;
+}
+
+.cardHeader .btn-danger {
+  position: absolute;
+  right: 8px;
+  top: 10.5px;
+  padding-bottom: 9px;
+  padding-top: 4px;
+}
+
+
+/******************/
+.iconandDropDownButtons {
+  position: relative;
+}
+
+.dropDownButtonLabel {
+  position: absolute !important;
+  right: 10px !important;
+  top: 5px !important;
+  width: 90px !important;
+}
+
+#textareaa {
+  padding-right: 105px;
+}
+
+#textareaa:focus {
+  outline: none;
+  /* textarea'ya tiklayince disinda olusan cizgiyi yok etmek icin */
+}
+
+.icons {
+  height: 35px;
+  width: 30px;
+  padding: 5px 10px 0 0;
+  cursor: pointer;
+}
+
+
+/* button animation */
+.buttonFilter {
+  width: 100%;
+  height: 40px;
+
+  display: inline-block;
+  padding: 5px;
+  background: #0079ff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.buttonFilter:hover {
+  animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+.textEfectRubberBrand {
+  display: inline-block;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.textEfectRubberBrand:hover {
+  animation-name: rubberBand;
+  cursor: default;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
