@@ -280,7 +280,7 @@ export class Home extends Component {
                         </div>
                         <div style={{ width: '33.33%' }}>
                             <div className='mx-2'>
-                                <Button className='buttonFilter' onClick={() => this.updateShowFilteredTodos('all')}>ALL</Button>
+                                <Button className='buttonFilter' variant="primary" onClick={() => this.updateShowFilteredTodos('all')}>ALL</Button>
                             </div>
                         </div>
                         <div style={{ width: '33.33%' }}>
