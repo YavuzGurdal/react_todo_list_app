@@ -129,35 +129,41 @@ export class Home extends Component {
 
             <Card key={todo.id}>
 
-                <Card.Header className='cardHeader' style={{
+                <Card.Header className='flex-container' style={{
                     padding: '0', height: '60px',
                     backgroundColor:
                         todo.complete ? '#3fc5f0' :
-                            Date.now() - Date.parse(todo.date) > 172800000 ? '#6decb9' :
-                            Date.now() - Date.parse(todo.date) > 0 ? '#eef5b2' :
-                            Date.now() - Date.parse(todo.date) < 0 ? '#ff7272' : '' 
+                            Date.now() - Date.parse(todo.date) > 172800000 ? '#ff7272' :
+                                Date.now() - Date.parse(todo.date) > 0 ? '#eef5b2' :
+                                    Date.now() - Date.parse(todo.date) < 0 ? '#6decb9' : ''
                 }} >
+                    
+                    {/* flex yaptim ama toggle ozelligi sadece yazida oldu. yani yaziya basinca calisiyor */}
+                    <div>
+                        <Accordion.Toggle
+                            style={{ textDecorationColor: 'red', textDecoration: todo.complete ? 'line-through' : "" }} className='accordionToggle' as={Button} variant="link" eventKey={i}
+                        >
+                            {todo.title}
 
-                    <Accordion.Toggle
-                        style={{ textDecorationColor: 'red', textDecoration: todo.complete ? 'line-through' : "" }} className='accordionToggle' as={Button} variant="link" eventKey={i}
-                    >
-                        {todo.title}
+                        </Accordion.Toggle>
+                    </div>
 
-                    </Accordion.Toggle>
+                    <div>
+                        <Button // yapildi butonu
+                            onClick={() => this.toggleComplete(todo.id)}
+                            className='btn btn-success'
+                        >
+                            <FaCheck className='iconWidthHeight' />
+                        </Button>
 
-                    <Button // yapildi butonu
-                        onClick={() => this.toggleComplete(todo.id)}
-                        className='btn btn-success'
-                    >
-                        <FaCheck className='iconWidthHeight' />
-                    </Button>
+                        <Button // silme butonu
+                            onClick={() => this.deleteTodo(todo.id)}
+                            className='btn btn-danger'
+                        >
+                            <FaTrashAlt className='iconWidthHeight' />
+                        </Button>
+                    </div>
 
-                    <Button // silme butonu
-                        onClick={() => this.deleteTodo(todo.id)}
-                        className='btn btn-danger'
-                    >
-                        <FaTrashAlt className='iconWidthHeight' />
-                    </Button>
                 </Card.Header>
 
                 <Accordion.Collapse eventKey={i}>
@@ -218,7 +224,7 @@ export class Home extends Component {
                             </DropdownButton>
                         </div>
 
-                        <textarea 
+                        <textarea
                             id='textareaa'
                             value={this.state.items.detail}
                             onChange={this.updateTextareaText}
