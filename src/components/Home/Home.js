@@ -137,7 +137,7 @@ export class Home extends Component {
                                 Date.now() - Date.parse(todo.date) > 0 ? '#eef5b2' :
                                     Date.now() - Date.parse(todo.date) < 0 ? '#6decb9' : ''
                 }} >
-                    
+
                     {/* flex yaptim ama toggle ozelligi sadece yazida oldu. yani yaziya basinca calisiyor */}
                     <div>
                         <Accordion.Toggle
@@ -240,8 +240,8 @@ export class Home extends Component {
 
         return (
             <div>
-                <Fade left>
-                    <Bounce bottom>
+                <Fade left duration={1800}>
+                    <Bounce bottom duration={1800}>
                         <div className="jumbotron jumbotron-fluid mb-4 py-1 text-center">
                             <div className="container">
                                 <h1 className="display-3">
@@ -256,8 +256,8 @@ export class Home extends Component {
                     </Bounce>
                 </Fade>
 
-                <Fade right>
-                    <Bounce bottom>
+                <Fade right duration={1800}>
+                    <Bounce bottom duration={1800}>
                         <InputItem
                             itemPipe={this.itemReceiveHandler} // aslında burada itemPipe ile gelen degerleri 
                             //itemReceiveHandler fonksiyonuna gonderiyoruz
@@ -269,13 +269,13 @@ export class Home extends Component {
                     </Bounce>
                 </Fade>
 
-                <Bounce bottom>
+                <Bounce bottom duration={1800}>
                     <Accordion>
                         {addItemList}
                     </Accordion>
                 </Bounce>
 
-                <Zoom top>
+                <Zoom top duration={1800}>
                     <div className='mt-3' style={{ display: 'flex' }}>
                         {/* bunlar filtreleme icin gerekli olan tuslar */}
                         <div style={{ width: '33.33%' }}>
