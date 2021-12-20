@@ -249,7 +249,7 @@ export class Home extends Component {
                                     <span class="textEfectRubberBrand" aria-hidden="true"> List</span>
                                 </h1>
                                 <p className="lead">
-                                    <span class="textEfectRubberBrand" aria-hidden="true">Planlı bir hayat başarıya giden ilk adımdır.</span>
+                                    <span class="textEfectRubberBrand" aria-hidden="true">Plan, live your plan. Let your future develop according to your own preferences!</span>
                                 </p>
                             </div>
                         </div>
